@@ -1,2 +1,5 @@
-# neu-planet
-Twit clone.
+# neuPlanet 
+### 🌎 💚 💠
+a microblogging platform
+
+:construction: currently in build stage
