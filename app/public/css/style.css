@@ -1,0 +1,10 @@
+.jumbotron {
+  color: #444;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  margin: 20px;
+}
+
