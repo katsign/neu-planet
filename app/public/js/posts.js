@@ -23,7 +23,8 @@ submitPostBtn.addEventListener('click', (e) => {
       const feed = document.getElementById('feed');
       row.classList.add('post');
 
-      const postAuthor = document.createElement('p');
+      const postAuthor = document.createElement('small');
+      const separator = document.createElement('hr');
       const postBody = document.createElement('p');
       const postDate = document.createElement('small');
 
@@ -36,6 +37,7 @@ submitPostBtn.addEventListener('click', (e) => {
       row.appendChild(postAuthor);
       row.appendChild(postBody);
       row.appendChild(postDate);
+      row.append(separator);
 
       feed.prepend(row);
     });
@@ -64,6 +66,7 @@ fetch('/api/all', {
       const postBody = document.createElement('p');
       const postDate = document.createElement('small');
       postAuthor.textContent = `${author} posted: `;
+      
       postBody.textContent = `${body}`;
       postDate.textContent = `${new Date(createdAt).toLocaleDateString()}`;
 
