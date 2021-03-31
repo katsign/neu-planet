@@ -1,4 +1,4 @@
-![Planet Logo](/app/public/img/favicon.ico)
+![Planet Logo](favicon.ico)
 
 # neuPlanet 🌒 Private Microblogging for the Post Connoisseur
 
@@ -30,7 +30,7 @@ neuPlanet is a personal microblogging platform for the late stage internet user 
 
 
 ## *Screenshots*
-![Demo of Homepage](/app/public/img/ss.png)
+![Demo of Homepage](/app/public/img/ss.PNG)
 
 ## *Questions?*
 🌒 Links in Bio: [katsign](https://github.com/katsign)
