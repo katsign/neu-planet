@@ -28,6 +28,12 @@ body {
     padding: 2rem;
     margin: 2rem;
     border-radius: 20px;
+    border: .5px solid var(--light);
+  }
+
+  div.pad {
+    padding: 2rem;
+    margin: 2rem;
   }
   
   .circle {
