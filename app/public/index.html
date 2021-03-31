@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>neuPlanet</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>neuPlanet</title>
   </head>
 
   <body>
-<main class="container">
-    <div class="d-flex flex-row align-items-center justify-content-around">
-      <div class="tab" id="title">
-        <div id="orb" class="circle mb-3"></div>
-        <h2>neuPlanet</h2>
+    <main class="container">
+      <div class="d-flex flex-row align-items-center justify-content-around">
+        <div class="pad" id="title">
+          <div id="orb" class="circle mb-4"></div>
+          <h2>neuPlanet</h2>
+        </div>
+        <div class="pad" id="postTab">
+          <span class="material-icons thistle">chat_bubble</span>
+          <input type="text" id="author" placeholder="username" />
+          <hr />
+          <textarea
+            rows="3"
+            id="input-box"
+            placeholder="What's going on in your world?"
+          ></textarea>
+          <div class="float-right">
+            <button id="post-submit" class="btn btn-sm btn-outline-primary">
+              Post
+            </button>
+          </div>
+        </div>
+        <div class="tab scroll" id="feedTab">
+          <div>
+            <h4>Feed</h4>
+            <hr />
+          </div>
+          <div id="feed"></div>
+        </div>
       </div>
-      <div class="tab" id="postTab">
-        <span class="material-icons thistle">person_pin</span>
-        <input type="text" id="author" placeholder="username">
-        <textarea id="input-box" placeholder="What's going on in your world?"></textarea>
-        <button id="post-submit" class="btn btn-sm btn-outline-primary">Post</button>
-      </div>
-    </div>
-    <div class="tab scroll" id="feedTab">
-        <div><h4>Feed</h4>
-        <hr>
-      </div>
-      <div id="feed"></div>
-    </div>
-  </div>
-</main>
+    </main>
 
-  <script type="text/javascript" src="js/posts.js"></script>
+    <script type="text/javascript" src="js/posts.js"></script>
   </body>
 </html>
