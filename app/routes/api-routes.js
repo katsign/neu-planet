@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Post = require("../models/post.js");
+const Post = require("../models/post");
 
   // Get All
   router.get("/api/all", (req, res) => {
@@ -15,14 +15,14 @@ const Post = require("../models/post.js");
     Post.create({
       author: req.body.author,
       body: req.body.body,
-      created_at: req.body.created_at,
+      createdAt: req.body.createdAt,
     }).then((results) => res.json(results));
   });
 
   // Delete
-  router.delete('/api/posts/:id', (req, res) => {
+  router.delete('/api/all/:id', (req, res) => {
     const condition = `id = ${req.params.id}`;
-    burger.delete(condition, (result) => {
+    Post.delete(condition, (result) => {
       if (result.affectedRows == 0) {
         return res.status(404).end();
       }
