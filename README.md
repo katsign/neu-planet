@@ -5,7 +5,7 @@
  <h2>Private Microblogging for the Post Connoisseur</h2>
 
 ![GitHub license](https://img.shields.io/badge/License-MIT-orange)
-### This responsive web app started as a bootcamp exercise and grew into a larger collaborative project, [devlr](https://devlr.herokuapp.com). With some new knowledge, I went back and restyled this initial starting point of the project for personal use.
+### This responsive web app started as a bootcamp exercise and grew into a larger collaborative project, [devlr](https://devlr.herokuapp.com). With some new knowledge, I went back and restyled this initial starting point of the project for personal use. A mini blog, just for you and your world.
 </div>
 
 ## *Table of Contents*
