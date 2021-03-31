@@ -2,6 +2,7 @@
 
 // Dependencies
 const express = require('express');
+const path = require('path');
 
 // Sets up the Express App
 const app = express();
@@ -15,7 +16,9 @@ app.use(express.json());
 app.use(express.static('app/public'));
 
 // Routes
-require('./app/routes/api-routes.js')(app);
+const routes = require('./app/routes/api-routes.js');
+
+app.use(routes);
 
 // Starts the server to begin listening
-app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`==> 💫 Server Listening on http://localhost:${PORT}/`));
