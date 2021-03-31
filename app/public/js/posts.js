@@ -1,6 +1,6 @@
 // When user clicks add-btn
-const submitChirpBtn = document.getElementById('post-submit');
-submitChirpBtn.addEventListener('click', (e) => {
+const submitPostBtn = document.getElementById('post-submit');
+submitPostBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
   const newPost = {
@@ -18,18 +18,18 @@ submitChirpBtn.addEventListener('click', (e) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success in posting chirp!', data);
+      console.log('Success!', data);
       const row = document.createElement('div');
       const feed = document.getElementById('feed');
       row.classList.add('post');
 
       const postAuthor = document.createElement('p');
       const postBody = document.createElement('p');
-      const postDate = document.createElement('p');
+      const postDate = document.createElement('small');
 
       postAuthor.textContent = `${data.author} posted: `;
       postBody.textContent = `${data.body}`;
-      postDate.textContent = `at ${new Date(
+      postDate.textContent = `${new Date(
         data.created_at
       ).toLocaleDateString()}`;
 
@@ -42,7 +42,7 @@ submitChirpBtn.addEventListener('click', (e) => {
 
   // Empty the input box
   document.getElementById('author').value = '';
-  document.getElementById('chirp-box').value = '';
+  document.getElementById('input-box').value = '';
 });
 
 fetch('/api/all', {
@@ -54,21 +54,23 @@ fetch('/api/all', {
   .then((response) => response.json())
   .then((data) => {
     console.log('Successful GET all posts:', data);
-    data.map(({ author, body, created_at }) => {
+    data.map(({ author, body, createdAt }) => {
       const row = document.createElement('div');
       const feed = document.getElementById('feed');
       row.classList.add('post');
 
-      const postAuthor = document.createElement('p');
+      const postAuthor = document.createElement('small');
+      const separator = document.createElement('hr');
       const postBody = document.createElement('p');
-      const postDate = document.createElement('p');
+      const postDate = document.createElement('small');
       postAuthor.textContent = `${author} posted: `;
       postBody.textContent = `${body}`;
-      postDate.textContent = `at ${new Date(created_at).toLocaleDateString()}`;
+      postDate.textContent = `${new Date(createdAt).toLocaleDateString()}`;
 
       row.appendChild(postAuthor);
       row.appendChild(postBody);
       row.appendChild(postDate);
+      row.append(separator);
 
       feed.prepend(row);
     });
