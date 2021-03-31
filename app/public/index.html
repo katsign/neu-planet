@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>neuPlanet</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" id="csstheme" href="/stylesheets/style.css" type="text/css" />
+  <title>neuPlanet</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   </head>
   <body>
-
-    <div class="jumbotron">
-      <h1 class="text-center">neuPlanet</h1>
-      <p class="lead text-center">What's going on in your world?</p>
-    </div>
-
-    <div class="container">
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p class="lead">Author</p>
-          <input class="form-control" type="text" id="author" placeholder="username">
-          <textarea class="form-control" rows="3" id="input-box" placeholder="What's going on in your world?"></textarea>
-          <button id="post-submit" class="btn btn-sm btn-outline-secondary float-right">Post</button>
-        </div>
+<main class="container">
+    <div class="d-flex flex-row align-items-center justify-content-around">
+      <div class="tab" id="title">
+        <div id="orb" class="circle mb-3"></div>
+        <h2>neuPlanet</h2>
       </div>
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p class="lead">Feed</p>
-          <hr>
-          <div id="feed"></div>
-        </div>
+      <div class="tab" id="postTab">
+        <span class="material-icons thistle">person_pin</span>
+        <input type="text" id="author" placeholder="username">
+        <textarea id="input-box" placeholder="What's going on in your world?"></textarea>
+        <button id="post-submit" class="btn btn-sm btn-outline-primary">Post</button>
       </div>
-
     </div>
+    <div class="tab" id="feedTab">
+        <p class="lead">Feed</p>
+        <hr>
+        <div id="feed"></div>
+    </div>
+  </div>
+</main>
 
   <script type="text/javascript" src="js/posts.js"></script>
   </body>
