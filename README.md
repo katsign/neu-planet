@@ -2,7 +2,7 @@
 
 ![Planet Logo](favicon.ico)
 # neuPlanet 🌒 
- <h2 style="margin-bottom: 1rem;">Private Microblogging for the Post Connoisseur</h2>
+ <h2>Private Microblogging for the Post Connoisseur</h2>
 
 ![GitHub license](https://img.shields.io/badge/License-MIT-orange)
 ### This responsive web app started as a bootcamp exercise and grew into a larger collaborative project, [devlr](https://devlr.herokuapp.com). With some new knowledge, I went back and restyled this initial starting point of the project for personal use.
@@ -33,7 +33,11 @@ neuPlanet is a personal microblogging platform for the late stage internet user 
 
 
 ## *Screenshots*
-![Demo of Homepage](/app/public/img/ss.PNG)
+
+Mobile / Vertical View            |  Desktop / Landscape View
+:-------------------------:|:-------------------------:
+![Demo of Mobile Layout](/app/public/img/vert.PNG)  |  ![Demo of Homepage](/app/public/img/ss.PNG)
+
 
 ## *Questions?*
 🌒 Links in Bio: [katsign](https://github.com/katsign)
