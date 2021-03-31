@@ -1,9 +1,11 @@
-![Planet Logo](favicon.ico)
+<div align="center">
 
+![Planet Logo](favicon.ico)
 # neuPlanet 🌒 Private Microblogging for the Post Connoisseur
 
 ![GitHub license](https://img.shields.io/badge/License-MIT-orange)
 ### This microblog web app started as a bootcamp exercise and grew into a larger collaborative project, [devlr](https://devlr.herokuapp.com). I went back and restyled this initial starting point of the project for personal use.
+</div>
 
 ## *Table of Contents*
 
