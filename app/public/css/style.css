@@ -53,6 +53,10 @@ div.pad {
   color: thistle;
 }
 
+.material-icons.light {
+  color: var(--light);
+}
+
 #orb {
   width: 144px;
   height: 144px;
@@ -156,11 +160,41 @@ hr {
   box-shadow: 0 0 0 0.2rem rgba(216, 191, 216, 0.5);
 }
 
+.btn-outline-secondary {
+  color: transparent;
+  border-color: transparent;
+}
+.btn-outline-secondary:hover {
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+.btn-outline-secondary:focus,
+.btn-outline-secondary.focus {
+  box-shadow: 0 0 0 0.0rem;
+}
+.btn-outline-secondary.disabled,
+.btn-outline-secondary:disabled {
+  color: transparent;
+  background-color: transparent;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-secondary.dropdown-toggle {
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.0rem;
+}
+
 @media (max-width: 900px) {
   .container {
     width: fit-content;
     height: fit-content;
-    margin-top: 3rem;
   }
   .flex-row {
     flex-direction: column !important;
