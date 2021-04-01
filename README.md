@@ -1,6 +1,6 @@
 <div align="center">
 
-![Planet Logo](favicon.ico)
+![Planet Logo](/app/public/img/favicon.ico)
 # neuPlanet 🌒 
  <h2>Private Microblogging for the Post Connoisseur</h2>
 
