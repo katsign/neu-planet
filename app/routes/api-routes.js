@@ -19,15 +19,13 @@ const Post = require("../models/post");
     }).then((results) => res.json(results));
   });
 
-  // Delete
-  router.delete('/api/all/:id', (req, res) => {
-    const condition = `id = ${req.params.id}`;
-    Post.delete(condition, (result) => {
-      if (result.affectedRows == 0) {
-        return res.status(404).end();
-      }
-      res.status(200).end();
-    });
+  // DELETE route for deleting posts
+  app.delete('/api/posts/:id', (req, res) => {
+    db.Post.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then((dbPost) => res.json(dbPost));
   });
 
 module.exports = router;
