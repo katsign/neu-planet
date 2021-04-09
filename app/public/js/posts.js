@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', (e) => {
-  console.log('dom loaded!');
 
   // When user clicks add-btn
   const submitPostBtn = document.getElementById('post-submit');
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const newPost = {
       author: document.getElementById('author').value.trim(),
       body: document.getElementById('input-box').value.trim(),
-      created_at: new Date(),
+      createdAt: new Date(),
     };
 
     fetch('/api/new', {
@@ -24,22 +23,32 @@ document.addEventListener('DOMContentLoaded', (e) => {
         console.log('Success!', data);
         const row = document.createElement('div');
         const feed = document.getElementById('feed');
-        row.classList.add('post');
+        row.classList.add('data-post');
+
+        let id = newPost.id;
 
         const postAuthor = document.createElement('small');
         const separator = document.createElement('hr');
         const postBody = document.createElement('p');
         const postDate = document.createElement('small');
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerHTML = `<span class="material-icons thistle delete" style="font-size: 18px" data-value="${id}">delete_outline</span>`;
+        deleteBtn.setAttribute(
+          'class',
+          'btn btn-sm btn-outline-secondary float-right'
+        );
+        deleteBtn.addEventListener('click', handlePostDelete);
 
         postAuthor.textContent = `${data.author} posted: `;
         postBody.textContent = `${data.body}`;
         postDate.textContent = `${new Date(
-          data.created_at
+          data.createdAt
         ).toLocaleDateString()}`;
 
         row.appendChild(postAuthor);
         row.appendChild(postBody);
         row.appendChild(postDate);
+        row.appendChild(deleteBtn);
         row.append(separator);
 
         feed.prepend(row);
@@ -62,19 +71,19 @@ document.addEventListener('DOMContentLoaded', (e) => {
       data.map(({ id, author, body, createdAt }) => {
         const row = document.createElement('div');
         const feed = document.getElementById('feed');
-        row.classList.add('post');
+        row.classList.add('data-post');
 
         const postAuthor = document.createElement('small');
         const separator = document.createElement('hr');
         const postBody = document.createElement('p');
         const postDate = document.createElement('small');
-        var deleteBtn = document.createElement('BUTTON');
-        deleteBtn.innerHTML = `<span class="material-icons thistle" style="font-size: 18px" data-value="${id}">delete_outline</span>`;
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerHTML = `<span class="material-icons thistle delete" style="font-size: 18px" data-value="${id}">delete_outline</span>`;
         deleteBtn.setAttribute(
           'class',
-          'btn btn-sm btn-outline-secondary float-right delete'
+          'btn btn-sm btn-outline-secondary float-right'
         );
-
+        deleteBtn.addEventListener('click', handlePostDelete);
 
         postAuthor.textContent = `${author} posted: `;
         postBody.textContent = `${body}`;
@@ -91,17 +100,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
     })
     .catch((err) => console.error(err));
 
-    
-    const deleteBtn = document.querySelectorAll('.delete');
-    deleteBtn.addEventListener('click');
+  // Delete Post
+  const deletePost = (id) => {
+    fetch(`/api/all/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(() => location.reload());
+  };
 
-      let id = this.dataset.value;
+  const handlePostDelete = (e) => {
+    const currentPost = e.target.dataset.value;
+    console.log(currentPost);
 
-      fetch(`/api/posts/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-
+    let chosenID = currentPost;
+    deletePost(chosenID);
+  };
 });
