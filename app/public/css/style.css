@@ -191,7 +191,7 @@ hr {
   box-shadow: 0 0 0 0.0rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   .container {
     width: fit-content;
     height: fit-content;
