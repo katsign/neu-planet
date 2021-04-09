@@ -19,6 +19,16 @@ const Post = require("../models/post");
     }).then((results) => res.json(results));
   });
 
+  router.get("/api/all/:id", (req, res) => {
+    Post.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbPost => {
+      res.send(dbPost);
+    });
+  });
+
   // DELETE route for deleting posts
   router.delete('/api/all/:id', (req, res) => {
     Post.destroy({
