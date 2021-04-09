@@ -20,12 +20,12 @@ const Post = require("../models/post");
   });
 
   // DELETE route for deleting posts
-  app.delete('/api/posts/:id', (req, res) => {
-    db.Post.destroy({
+  router.delete('/api/all/:id', (req, res) => {
+    Post.destroy({
       where: {
         id: req.params.id,
       },
-    }).then((dbPost) => res.json(dbPost));
+    }).then(() => res.end());
   });
 
 module.exports = router;
