@@ -4,9 +4,10 @@
 # neuPlanet 🌒 
  <h2>Private Microblogging for the Post Connoisseur</h2>
 
-![GitHub license](https://img.shields.io/badge/License-MIT-orange)
-### This responsive web app started as a bootcamp exercise and grew into a larger collaborative project, [devlr](https://devlr.herokuapp.com). With some new knowledge, I went back and restyled my initial starting point for personal use. A mini blog, just for you and your world.
+![GitHub license](https://img.shields.io/badge/License-MIT-d8bfd8)
 </div>
+
+### This responsive web app started as a bootcamp exercise and grew into a larger collaborative project, [devlr](https://devlr.herokuapp.com). With some new knowledge, I went back and restyled my initial starting point for personal use. A mini blog, just for you and your world.
 
 ## *Table of Contents*
 
@@ -14,7 +15,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Questions](#questions)
+- [Contact](#contact)
 
 ## *Description*
 neuPlanet is a personal microblogging platform for the late stage internet user — sometimes you just need to post into the void. This application uses an Express server and sources data using a Sequelize ORM and MySQL database.
@@ -37,9 +38,10 @@ Mobile / Vertical View            |  Desktop / Landscape View
 :-------------------------:|:-------------------------:
 ![Demo of Mobile Layout](/app/public/img/vert.PNG)  |  ![Demo of Homepage](/app/public/img/ss.PNG)
 
+## *Contact*
+🔗 Links in Bio @[katsign](https://github.com/katsign)
 
-## *Questions?*
-🌒 Links in Bio: [katsign](https://github.com/katsign)
+![Email Badge](https://img.shields.io/badge/Email%20Me-mailtokatsign%40gmail.com-d8bfd8)
 
 ---
 This project is MIT licensed. &copy; 2021
